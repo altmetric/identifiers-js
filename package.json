@@ -1,0 +1,89 @@
+{
+  "name": "@altmetric/identifiers",
+  "version": "1.0.0",
+  "description": "Extract scholarly identifiers (DOI, arXiv, ORCID, PubMed, Bibcode, Handle, NCT, RePEc, URN)",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./arxiv": {
+      "types": "./types/arxiv.d.ts",
+      "import": "./src/arxiv.js"
+    },
+    "./bibcode": {
+      "types": "./types/bibcode.d.ts",
+      "import": "./src/bibcode.js"
+    },
+    "./doi": {
+      "types": "./types/doi.d.ts",
+      "import": "./src/doi.js"
+    },
+    "./handle": {
+      "types": "./types/handle.d.ts",
+      "import": "./src/handle.js"
+    },
+    "./nct": {
+      "types": "./types/nct.d.ts",
+      "import": "./src/nct.js"
+    },
+    "./orcid": {
+      "types": "./types/orcid.d.ts",
+      "import": "./src/orcid.js"
+    },
+    "./pubmed": {
+      "types": "./types/pubmed.d.ts",
+      "import": "./src/pubmed.js"
+    },
+    "./repec": {
+      "types": "./types/repec.d.ts",
+      "import": "./src/repec.js"
+    },
+    "./urn": {
+      "types": "./types/urn.d.ts",
+      "import": "./src/urn.js"
+    }
+  },
+  "files": [
+    "src",
+    "types"
+  ],
+  "keywords": [
+    "doi",
+    "arxiv",
+    "orcid",
+    "pubmed",
+    "bibcode",
+    "handle",
+    "nct",
+    "repec",
+    "urn",
+    "identifiers",
+    "scholarly"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/altmetric/identifiers-js"
+  },
+  "bugs": "https://github.com/altmetric/identifiers-js/issues",
+  "author": "Altmetric LLP",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint src tests",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "pretest": "npm run lint"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "globals": "^15.12.0",
+    "jest": "^29.7.0"
+  }
+}
